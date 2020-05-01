@@ -8,7 +8,9 @@
     "selenium:watch": "./bin/deck selenium -j='--watch'",
     "selenium:debug:watch": "./bin/deck selenium --debug -j='--no-cache --watch'",
     "selenium:viz": "NETWORK=host docker-compose -f docker-local-compose.yml run --no-deps selenium \"npm install && ./bin/deck selenium -u ${RUNDECK_URL:-http://`hostname`:4440} -h\"",
-    "selenium:viz:update": "NETWORK=host docker-compose -f docker-local-compose.yml run --no-deps selenium \"npm install && ./bin/deck selenium -u ${RUNDECK_URL:-http://`hostname`:4440} -h -j='-u'\""
+    "selenium:viz:update": "NETWORK=host docker-compose -f docker-local-compose.yml run --no-deps selenium \"npm install && ./bin/deck selenium -u ${RUNDECK_URL:-http://`hostname`:4440} -h -j='-u'\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -42,7 +44,8 @@
     "tsconfig-paths": "^3.4.1",
     "tslint": "^5.10.0",
     "typescript": "^2.8.3",
-    "yargs": "^11.0.0"
+    "yargs": "^11.0.0",
+    "snyk": "^1.316.1"
   },
   "jest": {
     "roots": [
@@ -66,5 +69,6 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ]
-  }
+  },
+  "snyk": true
 }
