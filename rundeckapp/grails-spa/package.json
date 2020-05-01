@@ -29,7 +29,7 @@
     "vue2-ace-editor": "0.0.11",
     "vue2-filters": "^0.3.0",
     "vuex": "^3.1.0",
-    "snyk": "^1.165.2"
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@rundeck/ui-trellis": "git+https://github.com/rundeck/ui-trellis.git#69f412b59541e0bb27e60cde3a96cfa1354c0fe4",
